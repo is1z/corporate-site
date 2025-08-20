@@ -3,14 +3,14 @@
 
 import Link from 'next/link';
 
-export default function Header() {
+export default function firstView() {
   return (
     <header className="bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100 fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
             <Link href="/" className="text-2xl text-gray-900" style={{ fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase', fontStretch: 'condensed' }}>
-              Désert
+              HOGEHOGE
             </Link>
           </div>
           <nav className="hidden md:flex space-x-12">

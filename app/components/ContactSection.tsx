@@ -12,38 +12,6 @@ export default function ContactSection() {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (formData.message.length > 500) {
-      alert('メッセージは500文字以内で入力してください。');
-      return;
-    }
-
-    try {
-      const response = await fetch('https://readdy.ai/api/form-submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: new URLSearchParams({
-          id: 'jewelry-contact',
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          message: formData.message
-        })
-      });
-
-      if (response.ok) {
-        setSubmitted(true);
-        setFormData({ name: '', email: '', phone: '', message: '' });
-      }
-    } catch (error) {
-      console.error('送信エラー:', error);
-    }
-  };
-
   return (
     <section id="contact" className="py-32 bg-gray-50/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -127,7 +95,7 @@ export default function ContactSection() {
                 <p className="text-gray-600 text-base" style={{ fontFamily: 'system-ui, -apple-system, sans-serif', fontWeight: 300 }}>お問い合わせありがとうございます。3営業日以内にご連絡いたします。</p>
               </div>
             ) : (
-              <form id="jewelry-contact" onSubmit={handleSubmit}>
+              <form id="jewelry-contact">
                 <div className="space-y-8">
                   <div>
                     <label className="block text-sm text-gray-700 mb-3 tracking-widest uppercase" style={{ fontFamily: 'system-ui, -apple-system, sans-serif', fontWeight: 400, letterSpacing: '0.1em' }}>
