@@ -1,5 +1,6 @@
 
 'use client';
+import { withBasePath } from '@/utils/url';
 
 export default function FeaturedProducts() {
   const products = [
@@ -70,7 +71,7 @@ export default function FeaturedProducts() {
             <div key={product.id} className="group cursor-pointer">
               <div className="aspect-square mb-6 overflow-hidden bg-white rounded-none shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-500">
                 <img
-                  src={product.image}
+                  src={withBasePath(product.image)}
                   alt={product.name}
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                 />
