@@ -1,6 +1,5 @@
 
 'use client';
-import { withBasePath } from '@/utils/url';
 
 export default function Footer() {
   return (
@@ -9,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2 flex flex-col justify-center items-center text-center">
             <img
-              src={withBasePath("/images/desert_logo.jpg")}
+              src="/images/desert_logo.jpg"
               className="rounded-full w-[250px] h-[200px] mb-8"
             />
             <p className="text-gray-300 mb-8 max-w-md text-base leading-relaxed" style={{ fontFamily: 'system-ui, -apple-system, sans-serif', fontWeight: 300 }}>
