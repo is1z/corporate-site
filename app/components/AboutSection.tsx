@@ -1,5 +1,6 @@
 
 'use client';
+import { withBasePath } from '@/utils/url';
 
 export default function AboutSection() {
   return (
@@ -69,7 +70,7 @@ export default function AboutSection() {
           <div className="relative">
             <div className="bg-gray-100 rounded-none p-2">
               <img
-                src="/images/ayaco_profile.jpg"
+                src={withBasePath("/images/ayaco_profile.jpg")}
                 className="w-full h-auto rounded-none shadow-md object-cover object-top"
               />
             </div>
